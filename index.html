@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canada-Nigeria Verified Electronics Bridge — Class 6 Activity</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  :root {
+    --r-heading-font: 'Segoe UI', system-ui, sans-serif;
+    --r-main-font: 'Segoe UI', system-ui, sans-serif;
+    --r-main-font-size: 28px;
+    --r-heading1-size: 2em;
+    --r-heading2-size: 1.4em;
+    --r-heading3-size: 1.1em;
+  }
+  .reveal { font-weight: 400; }
+  .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; color: #111; text-transform: none; letter-spacing: -0.01em; }
+  .reveal h2 { border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-bottom: 20px; }
+  .reveal h3 { color: #333; font-size: 0.85em; margin-bottom: 10px; }
+  .reveal p, .reveal li { font-size: 0.72em; line-height: 1.55; color: #333; }
+  .reveal ul, .reveal ol { display: block; margin-left: 0; }
+  .reveal li { margin-bottom: 6px; }
+
+  /* Context brief styling */
+  .ctx-item { text-align: left; font-size: 0.62em; line-height: 1.5; margin-bottom: 10px; color: #333; }
+  .ctx-item strong { color: #111; }
+
+  /* Claim rung */
+  .rung { text-align: left; background: #f8f8f8; border-left: 4px solid #aaa; padding: 10px 16px; margin-bottom: 10px; font-size: 0.58em; line-height: 1.5; }
+  .rung b { display: block; font-size: 1.05em; color: #111; margin-bottom: 2px; }
+  .rung-blue { border-left-color: #2563eb; }
+  .rung-yellow { border-left-color: #d97706; }
+  .rung-green { border-left-color: #059669; }
+  .rung-red { border-left-color: #dc2626; }
+
+  /* Table */
+  .reveal table { font-size: 0.55em; width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .reveal th { background: #f0f0f0; font-weight: 700; text-align: left; padding: 8px 10px; border-bottom: 2px solid #ccc; }
+  .reveal td { padding: 7px 10px; border-bottom: 1px solid #e5e5e5; vertical-align: top; line-height: 1.45; }
+
+  /* Mermaid full width */
+  .mermaid { width: 100%; }
+  .mermaid svg { max-height: 520px !important; }
+  .diagram-slide .mermaid svg { max-height: 560px !important; }
+
+  /* Two column */
+  .two-col { display: flex; gap: 24px; width: 100%; }
+  .two-col .col { flex: 1; }
+  .two-col h3 { text-align: center; }
+
+  /* Small meta text */
+  .meta { font-size: 0.55em; color: #888; margin-top: 12px; }
+  .note { font-size: 0.55em; color: #666; text-align: center; margin-top: 10px; }
+  .note strong { color: #333; }
+
+  /* Slide number */
+  .reveal .slide-number { font-size: 14px; color: #aaa; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ===== SLIDE 1: TITLE ===== -->
+<section>
+  <h1 style="font-size:1.8em;">Canada-Nigeria Verified<br>Electronics Bridge</h1>
+  <p style="font-size:0.8em; color:#555; margin-top:16px;">Class 6 Activity: Context Brief · Claim Ladder · Evidence · Plan</p>
+  <p class="meta" style="margin-top:40px;">
+    TIMG 5203 — Cross-Border Business &amp; Digital Innovation<br>
+    Winter 2026 · Professor Eduardo Bailetti<br><br>
+    <strong style="color:#555;">Group 5:</strong> Abdullahi · Jayeola · Gideon · Rauf
+  </p>
+</section>
+
+<!-- ===== SLIDE 2: CONTEXT BRIEF ===== -->
+<section>
+  <h2>1 · Context Brief</h2>
+  <div class="ctx-item"><strong>1. Organization —</strong> A Canada-based digital coordination platform connecting Canadian refurbished electronics suppliers with verified Nigerian device resellers in Southwest Nigeria.</div>
+  <div class="ctx-item"><strong>2. Use Case —</strong> Pre-shipment orchestration — verified listing, landed-cost certainty, shipment execution — because it drives transaction value by eliminating pricing opacity and trust friction blocking cross-border refurbished electronics trade.</div>
+  <div class="ctx-item"><strong>3. Cross-Border Configuration —</strong> Spans Canada and Nigeria. What crosses: DATA (listings, IMEI, grades), MONEY (payments, duties, fees), GOODS (phones/tablets), SERVICE (orchestration), IP (verification algorithms).</div>
+  <div class="ctx-item"><strong>4. Technology Capability —</strong> PIPE 17's interoperability engine replaces manual WhatsApp negotiation and opaque cost estimation with automated device verification, transparent landed-cost calculation, and structured transaction orchestration.</div>
+  <div class="ctx-item"><strong>5. Cross-Border Wedge —</strong> Nigeria differs on import duty unpredictability (ECOWAS tariff, customs discretion), device certification (NCC type-approval), payment infrastructure (naira liquidity, FX volatility), logistics reliability (port delays) — requiring localized orchestration and shifting value from efficiency toward trust assurance and risk reduction.</div>
+  <div class="ctx-item"><strong>6. Value Thesis —</strong> If resellers adopt verified listings and landed-cost estimates prove accurate within ±10%, value is created via (1) higher transaction conversion from transparency and (2) reduced failed shipments — constrained by NCC compliance timelines and naira-CAD FX volatility.</div>
+</section>
+
+<!-- ===== SLIDE 3: CROSS-BORDER CONFIGURATION ===== -->
+<section class="diagram-slide">
+  <h2>2 · Cross-Border Configuration</h2>
+  <div class="mermaid">
+flowchart TB
+  subgraph CA["CANADA — Supply Side"]
+    direction LR
+    S1["Refurbished Electronics\nSuppliers"]
+    S2["Device Inventory\n(Phones, Tablets)"]
+    S3["IMEI Records +\nCondition Grading"]
+  end
+
+  subgraph P17["PIPE 17 — Orchestration Engine"]
+    direction LR
+    P1["Verified Listing\nModule"]
+    P2["Landed-Cost\nCalculator"]
+    P3["Transaction\nOrchestration"]
+    P4["Compliance +\nNCC Pre-Check"]
+  end
+
+  subgraph NG["NIGERIA — Demand Side"]
+    direction LR
+    N1["Device Resellers\n(SW Nigeria)"]
+    N2["End Consumers"]
+  end
+
+  S1 -- "DATA: Listings, IMEI" --> P1
+  S2 -- "GOODS: Phones" --> P3
+  P4 -- "IP: Verification" --> P1
+  P1 -- "Verified Catalog" --> P2
+  P2 -- "Landed-Cost Quote" --> P3
+  P3 -- "GOODS + SERVICE" --> N1
+  N1 -- "MONEY: Payment" --> P3
+  P3 -- "MONEY: Settlement" --> S1
+  N1 --> N2
+
+  style CA fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+  style P17 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+  style NG fill:#d1fae5,stroke:#059669,stroke-width:2px
+  </div>
+  <p class="note">Five cross-border flows: <strong>DATA · MONEY · GOODS · SERVICE · IP</strong></p>
+</section>
+
+<!-- ===== SLIDE 4: WORKFLOW COMPARISON ===== -->
+<section>
+  <h2>3 · Workflow: Current → Future</h2>
+  <div class="two-col">
+    <div class="col">
+      <h3>Current (Manual)</h3>
+      <div class="mermaid">
+flowchart TD
+  A["Supplier posts\non WhatsApp"] --> B["Reseller negotiates\nprice"]
+  B --> C["Manual landed-cost\nguess (15–30% error)"]
+  C --> D["Payment sent\non trust"]
+  D --> E["Shipment —\nno verification"]
+  E --> F["Frequent disputes\n+ failed deliveries"]
+
+  style A fill:#fee2e2,stroke:#dc2626
+  style B fill:#fee2e2,stroke:#dc2626
+  style C fill:#fee2e2,stroke:#dc2626
+  style D fill:#fee2e2,stroke:#dc2626
+  style E fill:#fee2e2,stroke:#dc2626
+  style F fill:#fca5a5,stroke:#b91c1c,stroke-width:3px
+      </div>
+    </div>
+    <div class="col">
+      <h3>Future (PIPE 17)</h3>
+      <div class="mermaid">
+flowchart TD
+  A2["1. Supplier lists\ndevices (IMEI, grade)"] --> B2["2. PIPE 17 verifies\nlisting"]
+  B2 --> C2["3. Reseller browses\nverified catalog"]
+  C2 --> D2["4. Landed-cost calc\n(Unit+Ship+Duty+FX)"]
+  D2 --> E2["5. Conditional\npayment (escrow)"]
+  E2 --> F2["6. Shipment +\ncompliance clearance"]
+  F2 --> G2["7. Settlement\nto supplier (CAD)"]
+
+  style A2 fill:#dbeafe,stroke:#2563eb
+  style B2 fill:#fef3c7,stroke:#d97706
+  style C2 fill:#d1fae5,stroke:#059669
+  style D2 fill:#fef3c7,stroke:#d97706
+  style E2 fill:#d1fae5,stroke:#059669
+  style F2 fill:#fef3c7,stroke:#d97706
+  style G2 fill:#dbeafe,stroke:#2563eb
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SLIDE 5: CLAIM LADDER ===== -->
+<section>
+  <h2>4 · Claim Ladder: Technology → Value</h2>
+  <div class="rung rung-blue"><b>1. Technology Capability</b>PIPE 17 automates device verification (IMEI, grading), landed-cost calculation (unit + shipping + duty + NCC fees + FX margin), and transaction orchestration across fragmented APIs.</div>
+  <div class="rung rung-blue"><b>2. Workflow Change</b>Manual WhatsApp sourcing → structured pre-shipment orchestration: verified listing → landed-cost quote → conditional payment → shipment. Compliance verification becomes the new bottleneck.</div>
+  <div class="rung rung-yellow"><b>3. Mechanism</b>Automated landed-cost calculation removes information asymmetry between supplier pricing and buyer total cost. Pre-shipment verification reduces post-arrival dispute rates.</div>
+  <div class="rung rung-green"><b>4. Value Creation</b>Suppliers: 20–35% higher transaction conversion. Resellers: 10–20% working capital recovery (currently lost to pricing surprises, customs holds, unverified quality).</div>
+  <div class="rung rung-green"><b>5. Value Capture</b>Suppliers: margin stability via reliable demand. Resellers: sourcing reliability. Platform: 2–4% orchestration fee. Switching costs sustain capture.</div>
+  <div class="rung rung-red"><b>6. Cross-Border Adjustment</b>Duty unpredictability, FX volatility (5–15% monthly), NCC type-approval, payment friction → value shifts from transaction speed to <em>trust assurance and cost predictability</em>.</div>
+</section>
+
+<!-- ===== SLIDE 6: VALUE SHIFT ===== -->
+<section class="diagram-slide">
+  <h2>5 · How Borders Change Value Creation</h2>
+  <div class="two-col">
+    <div class="col">
+      <h3>🇨🇦 Canada (Domestic)</h3>
+      <div class="mermaid">
+flowchart TD
+  A["Stable pricing +\nreliable data"] --> B["Accurate cost\nestimation"]
+  B --> C["Fast transaction\nclosure"]
+  C --> D["VALUE =\nTransaction Efficiency\n+ Speed"]
+
+  style A fill:#dbeafe,stroke:#2563eb
+  style B fill:#dbeafe,stroke:#2563eb
+  style C fill:#dbeafe,stroke:#2563eb
+  style D fill:#93c5fd,stroke:#1d4ed8,stroke-width:3px
+      </div>
+    </div>
+    <div class="col">
+      <h3>🇳🇬 Nigeria (Cross-Border)</h3>
+      <div class="mermaid">
+flowchart TD
+  A2["Duty unpredictability\n+ FX volatility"] --> B2["Cost estimation\nunreliable (15–30%)"]
+  E2["NCC type-approval\n+ payment friction"] --> B2
+  B2 --> C2["Trust deficit +\nfailed transactions"]
+  C2 --> D2["VALUE =\nTrust Assurance\n+ Risk Reduction"]
+
+  style A2 fill:#fef2f2,stroke:#dc2626
+  style E2 fill:#fef2f2,stroke:#dc2626
+  style B2 fill:#fef2f2,stroke:#dc2626
+  style C2 fill:#fef2f2,stroke:#dc2626
+  style D2 fill:#fca5a5,stroke:#b91c1c,stroke-width:3px
+      </div>
+    </div>
+  </div>
+  <p class="note"><strong>Key insight:</strong> Same technology, different value mechanism — this is what makes it a cross-border application.</p>
+</section>
+
+<!-- ===== SLIDE 7: EVIDENCE ===== -->
+<section>
+  <h2>6 · Evidence to Falsify Claims</h2>
+  <table>
+    <thead>
+      <tr><th style="width:14%">Claim</th><th style="width:33%">What Would Falsify It</th><th style="width:53%">Evidence Required</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1. Tech Capability</strong></td><td>PIPE 17 can't integrate with Nigerian gateways; cost calc &gt;15% error</td><td>PIPE 17 API docs; integration case studies; pilot accuracy data</td></tr>
+      <tr><td><strong>2. Workflow</strong></td><td>Resellers prefer WhatsApp even with automated alternatives</td><td>Reseller behavior surveys; digital adoption rates (TradeDepot, Jumia B2B); GSMA reports</td></tr>
+      <tr><td><strong>3. Mechanism</strong></td><td>Info asymmetry isn't the friction — trust or credit access matters more</td><td>Academic literature on trust in African B2B trade; World Bank Enterprise Surveys</td></tr>
+      <tr><td><strong>4. Value Creation</strong></td><td>Conversion gain &lt;5%; resellers lack volume to benefit</td><td>Cross-border e-commerce platform data; Nigeria imports (UN Comtrade HS 8517/8471)</td></tr>
+      <tr><td><strong>5. Value Capture</strong></td><td>Resellers replicate easily; fee tolerance &lt;2%</td><td>Competitor analysis; willingness-to-pay data; switching cost analysis</td></tr>
+      <tr><td><strong>6. Cross-Border</strong></td><td>Duties predictable; FX stable; NCC trivial; payments smooth</td><td>Customs tariff variance; CBN FX rates; NCC processing times; Flutterwave/Paystack benchmarks</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== SLIDE 8: PLAN OF ACTION ===== -->
+<section>
+  <h2>7 · Plan of Action</h2>
+  <div class="mermaid">
+gantt
+  title Evidence Collection Timeline (Weeks 7–9)
+  dateFormat YYYY-MM-DD
+  axisFormat %b %d
+
+  section Abdullahi
+  PIPE 17 API docs + integration specs     :a1, 2026-02-17, 14d
+  Nigeria Customs tariff data              :a2, 2026-02-27, 14d
+
+  section Rauf
+  Reseller sourcing behavior research      :r1, 2026-02-17, 14d
+  CBN FX data (official vs parallel)       :r2, 2026-02-27, 14d
+
+  section Jayeola
+  Trust vs info-asymmetry literature       :j1, 2026-02-17, 14d
+  NCC type-approval process + costs        :j2, 2026-02-27, 14d
+
+  section Gideon
+  UN Comtrade / NBS import data            :g1, 2026-02-17, 14d
+  Payment settlement benchmarks            :g2, 2026-02-27, 14d
+
+  section All
+  Competitive landscape mapping            :all1, 2026-02-27, 14d
+  Evidence synthesis + review              :crit, all2, 2026-03-09, 4d
+  </div>
+  <p class="note"><strong>Milestone:</strong> All evidence compiled by Week 8 → synthesis by Mar 12 → Application Marker checkpoint Mar 13</p>
+</section>
+
+</div><!-- end slides -->
+</div><!-- end reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+  // Initialize mermaid first
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'neutral',
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true,
+      curve: 'basis',
+      nodeSpacing: 25,
+      rankSpacing: 35,
+      padding: 12
+    },
+    gantt: {
+      useMaxWidth: true,
+      fontSize: 14,
+      barHeight: 28,
+      sectionFontSize: 15,
+      numberSectionStyles: 5
+    }
+  });
+
+  // Render all mermaid diagrams
+  async function renderMermaid() {
+    const elements = document.querySelectorAll('.mermaid');
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i];
+      const graphDef = el.textContent.trim();
+      const id = 'mermaid-' + i;
+      try {
+        const { svg } = await mermaid.render(id, graphDef);
+        el.innerHTML = svg;
+      } catch(e) {
+        console.error('Mermaid error:', e);
+      }
+    }
+  }
+
+  // Initialize Reveal.js after mermaid renders
+  renderMermaid().then(() => {
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      width: 1280,
+      height: 720,
+      margin: 0.06,
+      center: true,
+      transition: 'slide',
+      transitionSpeed: 'fast',
+      controls: true,
+      progress: true,
+      history: true,
+      keyboard: true,
+      overview: true,
+      touch: true
+    });
+  });
+</script>
+</body>
+</html>
