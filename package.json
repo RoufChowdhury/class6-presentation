@@ -1,0 +1,39 @@
+{
+  "name": "class6-presentation",
+  "version": "1.0.0",
+  "description": "Canada-Nigeria Verified Electronics Bridge - Class 6 Activity Presentation",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -o",
+    "serve": "npx http-server -p 8000",
+    "dev": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoufChowdhury/class6-presentation.git"
+  },
+  "keywords": [
+    "presentation",
+    "reveal.js",
+    "cross-border",
+    "business",
+    "nigeria",
+    "canada",
+    "electronics",
+    "timg5203"
+  ],
+  "authors": [
+    "Abdullahi",
+    "Jayeola",
+    "Gideon",
+    "Rauf"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RoufChowdhury/class6-presentation/issues"
+  },
+  "homepage": "https://github.com/RoufChowdhury/class6-presentation#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
