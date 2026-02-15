@@ -42,7 +42,7 @@ RESULT="$(cat "$TEMPLATE")"
 # Replace each placeholder with the value from the config JSON.
 # Uses python3 to read the JSON and perform replacements safely.
 RESULT="$(python3 -c "
-import json, sys, html
+import json, sys
 
 with open(sys.argv[1]) as f:
     config = json.load(f)
