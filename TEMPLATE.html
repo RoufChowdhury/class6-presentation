@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{DECK_TITLE}}</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.css">
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  :root {
+    --r-heading-font: 'Segoe UI', system-ui, sans-serif;
+    --r-main-font: 'Segoe UI', system-ui, sans-serif;
+    --r-main-font-size: 28px;
+    --r-heading1-size: 2em;
+    --r-heading2-size: 1.4em;
+    --r-heading3-size: 1.1em;
+  }
+  .reveal { font-weight: 400; }
+  .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; color: #111; text-transform: none; letter-spacing: -0.01em; }
+  .reveal h2 { border-bottom: 2px solid #ddd; padding-bottom: 8px; margin-bottom: 20px; }
+  .reveal h3 { color: #333; font-size: 0.85em; margin-bottom: 10px; }
+  .reveal p, .reveal li { font-size: 0.72em; line-height: 1.55; color: #333; }
+  .reveal ul, .reveal ol { display: block; margin-left: 0; }
+  .reveal li { margin-bottom: 6px; }
+
+  /* Context brief styling */
+  .ctx-item { text-align: left; font-size: 0.62em; line-height: 1.5; margin-bottom: 10px; color: #333; }
+  .ctx-item strong { color: #111; }
+
+  /* Claim rung */
+  .rung { text-align: left; background: #f8f8f8; border-left: 4px solid #aaa; padding: 10px 16px; margin-bottom: 10px; font-size: 0.58em; line-height: 1.5; }
+  .rung b { display: block; font-size: 1.05em; color: #111; margin-bottom: 2px; }
+  .rung-blue { border-left-color: #2563eb; }
+  .rung-yellow { border-left-color: #d97706; }
+  .rung-green { border-left-color: #059669; }
+  .rung-red { border-left-color: #dc2626; }
+
+  /* Table */
+  .reveal table { font-size: 0.55em; width: 100%; border-collapse: collapse; margin-top: 8px; }
+  .reveal th { background: #f0f0f0; font-weight: 700; text-align: left; padding: 8px 10px; border-bottom: 2px solid #ccc; }
+  .reveal td { padding: 7px 10px; border-bottom: 1px solid #e5e5e5; vertical-align: top; line-height: 1.45; }
+
+  /* Mermaid full width */
+  .mermaid { width: 100%; }
+  .mermaid svg { max-height: 520px !important; }
+  .diagram-slide .mermaid svg { max-height: 560px !important; }
+
+  /* Two column */
+  .two-col { display: flex; gap: 24px; width: 100%; }
+  .two-col .col { flex: 1; }
+  .two-col h3 { text-align: center; }
+
+  /* Small meta text */
+  .meta { font-size: 0.55em; color: #888; margin-top: 12px; }
+  .note { font-size: 0.55em; color: #666; text-align: center; margin-top: 10px; }
+  .note strong { color: #333; }
+
+  /* Slide number */
+  .reveal .slide-number { font-size: 14px; color: #aaa; }
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ===== SLIDE 1: TITLE ===== -->
+<section>
+  <h1 style="font-size:1.8em;">{{DECK_TITLE}}</h1>
+  <p style="font-size:0.8em; color:#555; margin-top:16px;">{{DECK_SUBTITLE}}</p>
+  <p class="meta" style="margin-top:40px;">
+    {{COURSE_INFO}}<br>
+    {{TERM_INFO}}<br><br>
+    <strong style="color:#555;">{{TEAM_LABEL}}</strong> {{TEAM_MEMBERS}}
+  </p>
+</section>
+
+<!-- ===== SLIDE 2: CONTEXT BRIEF ===== -->
+<section>
+  <h2>1 · Context Brief</h2>
+  <div class="ctx-item"><strong>1. Organization —</strong> {{CTX_ORGANIZATION}}</div>
+  <div class="ctx-item"><strong>2. Use Case —</strong> {{CTX_USE_CASE}}</div>
+  <div class="ctx-item"><strong>3. Cross-Border Configuration —</strong> {{CTX_CROSS_BORDER}}</div>
+  <div class="ctx-item"><strong>4. Technology Capability —</strong> {{CTX_TECHNOLOGY}}</div>
+  <div class="ctx-item"><strong>5. Cross-Border Wedge —</strong> {{CTX_WEDGE}}</div>
+  <div class="ctx-item"><strong>6. Value Thesis —</strong> {{CTX_VALUE_THESIS}}</div>
+</section>
+
+<!-- ===== SLIDE 3: CROSS-BORDER CONFIGURATION DIAGRAM ===== -->
+<section class="diagram-slide">
+  <h2>2 · Cross-Border Configuration</h2>
+  <div class="mermaid">
+flowchart TB
+  subgraph SIDE_A["{{SIDE_A_LABEL}}"]
+    direction LR
+    S1["{{SIDE_A_NODE_1}}"]
+    S2["{{SIDE_A_NODE_2}}"]
+    S3["{{SIDE_A_NODE_3}}"]
+  end
+
+  subgraph PLATFORM["{{PLATFORM_LABEL}}"]
+    direction LR
+    P1["{{PLATFORM_NODE_1}}"]
+    P2["{{PLATFORM_NODE_2}}"]
+    P3["{{PLATFORM_NODE_3}}"]
+    P4["{{PLATFORM_NODE_4}}"]
+  end
+
+  subgraph SIDE_B["{{SIDE_B_LABEL}}"]
+    direction LR
+    N1["{{SIDE_B_NODE_1}}"]
+    N2["{{SIDE_B_NODE_2}}"]
+  end
+
+  S1 -- "{{FLOW_1}}" --> P1
+  S2 -- "{{FLOW_2}}" --> P3
+  P4 -- "{{FLOW_3}}" --> P1
+  P1 -- "{{FLOW_4}}" --> P2
+  P2 -- "{{FLOW_5}}" --> P3
+  P3 -- "{{FLOW_6}}" --> N1
+  N1 -- "{{FLOW_7}}" --> P3
+  P3 -- "{{FLOW_8}}" --> S1
+  N1 --> N2
+
+  style SIDE_A fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+  style PLATFORM fill:#fef3c7,stroke:#d97706,stroke-width:2px
+  style SIDE_B fill:#d1fae5,stroke:#059669,stroke-width:2px
+  </div>
+  <p class="note">{{CROSS_BORDER_FLOWS_SUMMARY}}</p>
+</section>
+
+<!-- ===== SLIDE 4: WORKFLOW COMPARISON ===== -->
+<section>
+  <h2>3 · Workflow: Current → Future</h2>
+  <div class="two-col">
+    <div class="col">
+      <h3>Current ({{CURRENT_LABEL}})</h3>
+      <div class="mermaid">
+flowchart TD
+  A["{{CURRENT_STEP_1}}"] --> B["{{CURRENT_STEP_2}}"]
+  B --> C["{{CURRENT_STEP_3}}"]
+  C --> D["{{CURRENT_STEP_4}}"]
+  D --> E["{{CURRENT_STEP_5}}"]
+  E --> F["{{CURRENT_STEP_6}}"]
+
+  style A fill:#fee2e2,stroke:#dc2626
+  style B fill:#fee2e2,stroke:#dc2626
+  style C fill:#fee2e2,stroke:#dc2626
+  style D fill:#fee2e2,stroke:#dc2626
+  style E fill:#fee2e2,stroke:#dc2626
+  style F fill:#fca5a5,stroke:#b91c1c,stroke-width:3px
+      </div>
+    </div>
+    <div class="col">
+      <h3>Future ({{FUTURE_LABEL}})</h3>
+      <div class="mermaid">
+flowchart TD
+  A2["{{FUTURE_STEP_1}}"] --> B2["{{FUTURE_STEP_2}}"]
+  B2 --> C2["{{FUTURE_STEP_3}}"]
+  C2 --> D2["{{FUTURE_STEP_4}}"]
+  D2 --> E2["{{FUTURE_STEP_5}}"]
+  E2 --> F2["{{FUTURE_STEP_6}}"]
+  F2 --> G2["{{FUTURE_STEP_7}}"]
+
+  style A2 fill:#dbeafe,stroke:#2563eb
+  style B2 fill:#fef3c7,stroke:#d97706
+  style C2 fill:#d1fae5,stroke:#059669
+  style D2 fill:#fef3c7,stroke:#d97706
+  style E2 fill:#d1fae5,stroke:#059669
+  style F2 fill:#fef3c7,stroke:#d97706
+  style G2 fill:#dbeafe,stroke:#2563eb
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SLIDE 5: CLAIM LADDER ===== -->
+<section>
+  <h2>4 · Claim Ladder: Technology → Value</h2>
+  <div class="rung rung-blue"><b>1. Technology Capability</b>{{CLAIM_1_TECH}}</div>
+  <div class="rung rung-blue"><b>2. Workflow Change</b>{{CLAIM_2_WORKFLOW}}</div>
+  <div class="rung rung-yellow"><b>3. Mechanism</b>{{CLAIM_3_MECHANISM}}</div>
+  <div class="rung rung-green"><b>4. Value Creation</b>{{CLAIM_4_VALUE_CREATION}}</div>
+  <div class="rung rung-green"><b>5. Value Capture</b>{{CLAIM_5_VALUE_CAPTURE}}</div>
+  <div class="rung rung-red"><b>6. Cross-Border Adjustment</b>{{CLAIM_6_CROSS_BORDER}}</div>
+</section>
+
+<!-- ===== SLIDE 6: VALUE SHIFT ===== -->
+<section class="diagram-slide">
+  <h2>5 · How Borders Change Value Creation</h2>
+  <div class="two-col">
+    <div class="col">
+      <h3>{{VALUE_DOMESTIC_EMOJI}} {{VALUE_DOMESTIC_LABEL}}</h3>
+      <div class="mermaid">
+flowchart TD
+  A["{{VALUE_DOMESTIC_1}}"] --> B["{{VALUE_DOMESTIC_2}}"]
+  B --> C["{{VALUE_DOMESTIC_3}}"]
+  C --> D["{{VALUE_DOMESTIC_RESULT}}"]
+
+  style A fill:#dbeafe,stroke:#2563eb
+  style B fill:#dbeafe,stroke:#2563eb
+  style C fill:#dbeafe,stroke:#2563eb
+  style D fill:#93c5fd,stroke:#1d4ed8,stroke-width:3px
+      </div>
+    </div>
+    <div class="col">
+      <h3>{{VALUE_CROSS_BORDER_EMOJI}} {{VALUE_CROSS_BORDER_LABEL}}</h3>
+      <div class="mermaid">
+flowchart TD
+  A2["{{VALUE_CROSS_1}}"] --> B2["{{VALUE_CROSS_2}}"]
+  E2["{{VALUE_CROSS_3}}"] --> B2
+  B2 --> C2["{{VALUE_CROSS_4}}"]
+  C2 --> D2["{{VALUE_CROSS_RESULT}}"]
+
+  style A2 fill:#fef2f2,stroke:#dc2626
+  style E2 fill:#fef2f2,stroke:#dc2626
+  style B2 fill:#fef2f2,stroke:#dc2626
+  style C2 fill:#fef2f2,stroke:#dc2626
+  style D2 fill:#fca5a5,stroke:#b91c1c,stroke-width:3px
+      </div>
+    </div>
+  </div>
+  <p class="note"><strong>Key insight:</strong> {{VALUE_SHIFT_INSIGHT}}</p>
+</section>
+
+<!-- ===== SLIDE 7: EVIDENCE ===== -->
+<section>
+  <h2>6 · Evidence to Falsify Claims</h2>
+  <table>
+    <thead>
+      <tr><th style="width:14%">Claim</th><th style="width:33%">What Would Falsify It</th><th style="width:53%">Evidence Required</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>1. Tech Capability</strong></td><td>{{EVIDENCE_1_FALSIFY}}</td><td>{{EVIDENCE_1_REQUIRED}}</td></tr>
+      <tr><td><strong>2. Workflow</strong></td><td>{{EVIDENCE_2_FALSIFY}}</td><td>{{EVIDENCE_2_REQUIRED}}</td></tr>
+      <tr><td><strong>3. Mechanism</strong></td><td>{{EVIDENCE_3_FALSIFY}}</td><td>{{EVIDENCE_3_REQUIRED}}</td></tr>
+      <tr><td><strong>4. Value Creation</strong></td><td>{{EVIDENCE_4_FALSIFY}}</td><td>{{EVIDENCE_4_REQUIRED}}</td></tr>
+      <tr><td><strong>5. Value Capture</strong></td><td>{{EVIDENCE_5_FALSIFY}}</td><td>{{EVIDENCE_5_REQUIRED}}</td></tr>
+      <tr><td><strong>6. Cross-Border</strong></td><td>{{EVIDENCE_6_FALSIFY}}</td><td>{{EVIDENCE_6_REQUIRED}}</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ===== SLIDE 8: PLAN OF ACTION ===== -->
+<section>
+  <h2>7 · Plan of Action</h2>
+  <div class="mermaid">
+gantt
+  title {{PLAN_TITLE}}
+  dateFormat YYYY-MM-DD
+  axisFormat %b %d
+
+  section {{PLAN_PERSON_1}}
+  {{PLAN_TASK_1A}}     :a1, {{PLAN_START}}, 14d
+  {{PLAN_TASK_1B}}     :a2, {{PLAN_MID}}, 14d
+
+  section {{PLAN_PERSON_2}}
+  {{PLAN_TASK_2A}}     :r1, {{PLAN_START}}, 14d
+  {{PLAN_TASK_2B}}     :r2, {{PLAN_MID}}, 14d
+
+  section {{PLAN_PERSON_3}}
+  {{PLAN_TASK_3A}}     :j1, {{PLAN_START}}, 14d
+  {{PLAN_TASK_3B}}     :j2, {{PLAN_MID}}, 14d
+
+  section {{PLAN_PERSON_4}}
+  {{PLAN_TASK_4A}}     :g1, {{PLAN_START}}, 14d
+  {{PLAN_TASK_4B}}     :g2, {{PLAN_MID}}, 14d
+
+  section All
+  {{PLAN_SHARED_TASK}}            :all1, {{PLAN_MID}}, 14d
+  {{PLAN_FINAL_TASK}}             :crit, all2, {{PLAN_END}}, 4d
+  </div>
+  <p class="note"><strong>Milestone:</strong> {{PLAN_MILESTONE}}</p>
+</section>
+
+</div><!-- end slides -->
+</div><!-- end reveal -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+  // Initialize mermaid first
+  mermaid.initialize({
+    startOnLoad: false,
+    theme: 'neutral',
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true,
+      curve: 'basis',
+      nodeSpacing: 25,
+      rankSpacing: 35,
+      padding: 12
+    },
+    gantt: {
+      useMaxWidth: true,
+      fontSize: 14,
+      barHeight: 28,
+      sectionFontSize: 15,
+      numberSectionStyles: 5
+    }
+  });
+
+  // Render all mermaid diagrams
+  async function renderMermaid() {
+    const elements = document.querySelectorAll('.mermaid');
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i];
+      const graphDef = el.textContent.trim();
+      const id = 'mermaid-' + i;
+      try {
+        const { svg } = await mermaid.render(id, graphDef);
+        el.innerHTML = svg;
+      } catch(e) {
+        console.error('Mermaid error:', e);
+      }
+    }
+  }
+
+  // Initialize Reveal.js after mermaid renders
+  renderMermaid().then(() => {
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      width: 1280,
+      height: 720,
+      margin: 0.06,
+      center: true,
+      transition: 'slide',
+      transitionSpeed: 'fast',
+      controls: true,
+      progress: true,
+      history: true,
+      keyboard: true,
+      overview: true,
+      touch: true
+    });
+  });
+</script>
+</body>
+</html>

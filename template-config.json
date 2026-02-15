@@ -1,0 +1,124 @@
+{
+  "_comment": "Fill in each field below with your content. All {{PLACEHOLDER}} values in TEMPLATE.html will be replaced by the matching keys here.",
+
+  "DECK_TITLE": "Your Slide Deck Title",
+  "DECK_SUBTITLE": "Activity Type: Context Brief · Claim Ladder · Evidence · Plan",
+
+  "COURSE_INFO": "Course Code — Course Name",
+  "TERM_INFO": "Term Year · Professor Name",
+  "TEAM_LABEL": "Team:",
+  "TEAM_MEMBERS": "Member1 · Member2 · Member3 · Member4",
+
+  "CTX_ORGANIZATION": "Describe the organization: who it is, what it does, where it operates, and who it serves.",
+  "CTX_USE_CASE": "Describe the primary use case and why it matters — what drives value for the end user.",
+  "CTX_CROSS_BORDER": "Describe which borders are spanned and what crosses them: DATA, MONEY, GOODS, SERVICE, IP.",
+  "CTX_TECHNOLOGY": "Describe the core technology capability that enables the solution.",
+  "CTX_WEDGE": "Describe how the cross-border context differs from domestic — what local frictions or regulations exist.",
+  "CTX_VALUE_THESIS": "State the value thesis: if X happens, value is created via Y, constrained by Z.",
+
+  "SIDE_A_LABEL": "COUNTRY A — Supply Side",
+  "SIDE_A_NODE_1": "Supply Node 1",
+  "SIDE_A_NODE_2": "Supply Node 2",
+  "SIDE_A_NODE_3": "Supply Node 3",
+
+  "PLATFORM_LABEL": "PLATFORM — Orchestration Engine",
+  "PLATFORM_NODE_1": "Platform Module 1",
+  "PLATFORM_NODE_2": "Platform Module 2",
+  "PLATFORM_NODE_3": "Platform Module 3",
+  "PLATFORM_NODE_4": "Platform Module 4",
+
+  "SIDE_B_LABEL": "COUNTRY B — Demand Side",
+  "SIDE_B_NODE_1": "Demand Node 1",
+  "SIDE_B_NODE_2": "Demand Node 2",
+
+  "FLOW_1": "DATA: Flow description",
+  "FLOW_2": "GOODS: Flow description",
+  "FLOW_3": "IP: Flow description",
+  "FLOW_4": "Processed output",
+  "FLOW_5": "Quote or pricing",
+  "FLOW_6": "GOODS + SERVICE",
+  "FLOW_7": "MONEY: Payment",
+  "FLOW_8": "MONEY: Settlement",
+
+  "CROSS_BORDER_FLOWS_SUMMARY": "Five cross-border flows: DATA · MONEY · GOODS · SERVICE · IP",
+
+  "CURRENT_LABEL": "Manual",
+  "CURRENT_STEP_1": "Step 1 of current workflow",
+  "CURRENT_STEP_2": "Step 2 of current workflow",
+  "CURRENT_STEP_3": "Step 3 of current workflow",
+  "CURRENT_STEP_4": "Step 4 of current workflow",
+  "CURRENT_STEP_5": "Step 5 of current workflow",
+  "CURRENT_STEP_6": "Step 6 — pain point outcome",
+
+  "FUTURE_LABEL": "Platform",
+  "FUTURE_STEP_1": "1. First improved step",
+  "FUTURE_STEP_2": "2. Second improved step",
+  "FUTURE_STEP_3": "3. Third improved step",
+  "FUTURE_STEP_4": "4. Fourth improved step",
+  "FUTURE_STEP_5": "5. Fifth improved step",
+  "FUTURE_STEP_6": "6. Sixth improved step",
+  "FUTURE_STEP_7": "7. Final improved outcome",
+
+  "CLAIM_1_TECH": "Describe what the technology automates or enables.",
+  "CLAIM_2_WORKFLOW": "Describe the workflow change: from X to Y. Identify the new bottleneck.",
+  "CLAIM_3_MECHANISM": "Explain the causal mechanism: how does the technology change create value.",
+  "CLAIM_4_VALUE_CREATION": "Quantify value created for each stakeholder (suppliers, buyers, etc.).",
+  "CLAIM_5_VALUE_CAPTURE": "Describe how value is captured by each party and what sustains it.",
+  "CLAIM_6_CROSS_BORDER": "Describe cross-border frictions and how they shift value from efficiency to trust/risk reduction.",
+
+  "VALUE_DOMESTIC_EMOJI": "🏠",
+  "VALUE_DOMESTIC_LABEL": "Country A (Domestic)",
+  "VALUE_DOMESTIC_1": "Domestic condition 1",
+  "VALUE_DOMESTIC_2": "Domestic condition 2",
+  "VALUE_DOMESTIC_3": "Domestic condition 3",
+  "VALUE_DOMESTIC_RESULT": "VALUE =\nDomestic Value Type",
+
+  "VALUE_CROSS_BORDER_EMOJI": "🌍",
+  "VALUE_CROSS_BORDER_LABEL": "Country B (Cross-Border)",
+  "VALUE_CROSS_1": "Cross-border friction 1",
+  "VALUE_CROSS_2": "Combined impact",
+  "VALUE_CROSS_3": "Cross-border friction 2",
+  "VALUE_CROSS_4": "Resulting trust deficit",
+  "VALUE_CROSS_RESULT": "VALUE =\nCross-Border Value Type",
+
+  "VALUE_SHIFT_INSIGHT": "Same technology, different value mechanism — describe what makes it a cross-border application.",
+
+  "EVIDENCE_1_FALSIFY": "What would disprove the technology claim",
+  "EVIDENCE_1_REQUIRED": "What evidence is needed to test it",
+  "EVIDENCE_2_FALSIFY": "What would disprove the workflow claim",
+  "EVIDENCE_2_REQUIRED": "What evidence is needed to test it",
+  "EVIDENCE_3_FALSIFY": "What would disprove the mechanism claim",
+  "EVIDENCE_3_REQUIRED": "What evidence is needed to test it",
+  "EVIDENCE_4_FALSIFY": "What would disprove the value creation claim",
+  "EVIDENCE_4_REQUIRED": "What evidence is needed to test it",
+  "EVIDENCE_5_FALSIFY": "What would disprove the value capture claim",
+  "EVIDENCE_5_REQUIRED": "What evidence is needed to test it",
+  "EVIDENCE_6_FALSIFY": "What would disprove the cross-border claim",
+  "EVIDENCE_6_REQUIRED": "What evidence is needed to test it",
+
+  "PLAN_TITLE": "Evidence Collection Timeline",
+  "PLAN_START": "2026-01-01",
+  "PLAN_MID": "2026-01-15",
+  "PLAN_END": "2026-01-29",
+
+  "PLAN_PERSON_1": "Person 1",
+  "PLAN_TASK_1A": "Task 1A description",
+  "PLAN_TASK_1B": "Task 1B description",
+
+  "PLAN_PERSON_2": "Person 2",
+  "PLAN_TASK_2A": "Task 2A description",
+  "PLAN_TASK_2B": "Task 2B description",
+
+  "PLAN_PERSON_3": "Person 3",
+  "PLAN_TASK_3A": "Task 3A description",
+  "PLAN_TASK_3B": "Task 3B description",
+
+  "PLAN_PERSON_4": "Person 4",
+  "PLAN_TASK_4A": "Task 4A description",
+  "PLAN_TASK_4B": "Task 4B description",
+
+  "PLAN_SHARED_TASK": "Shared task description",
+  "PLAN_FINAL_TASK": "Final synthesis task",
+
+  "PLAN_MILESTONE": "All evidence compiled by Week X → synthesis by Date → checkpoint Date"
+}
