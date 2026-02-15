@@ -1,0 +1,124 @@
+{
+  "_comment": "Example config that reproduces the original Canada-Nigeria Electronics Bridge deck",
+
+  "DECK_TITLE": "Canada-Nigeria Verified<br>Electronics Bridge",
+  "DECK_SUBTITLE": "Class 6 Activity: Context Brief · Claim Ladder · Evidence · Plan",
+
+  "COURSE_INFO": "TIMG 5203 — Cross-Border Business &amp; Digital Innovation",
+  "TERM_INFO": "Winter 2026 · Professor Eduardo Bailetti",
+  "TEAM_LABEL": "Group 5:",
+  "TEAM_MEMBERS": "Abdullahi · Jayeola · Gideon · Rauf",
+
+  "CTX_ORGANIZATION": "A Canada-based digital coordination platform connecting Canadian refurbished electronics suppliers with verified Nigerian device resellers in Southwest Nigeria.",
+  "CTX_USE_CASE": "Pre-shipment orchestration — verified listing, landed-cost certainty, shipment execution — because it drives transaction value by eliminating pricing opacity and trust friction blocking cross-border refurbished electronics trade.",
+  "CTX_CROSS_BORDER": "Spans Canada and Nigeria. What crosses: DATA (listings, IMEI, grades), MONEY (payments, duties, fees), GOODS (phones/tablets), SERVICE (orchestration), IP (verification algorithms).",
+  "CTX_TECHNOLOGY": "PIPE 17's interoperability engine replaces manual WhatsApp negotiation and opaque cost estimation with automated device verification, transparent landed-cost calculation, and structured transaction orchestration.",
+  "CTX_WEDGE": "Nigeria differs on import duty unpredictability (ECOWAS tariff, customs discretion), device certification (NCC type-approval), payment infrastructure (naira liquidity, FX volatility), logistics reliability (port delays) — requiring localized orchestration and shifting value from efficiency toward trust assurance and risk reduction.",
+  "CTX_VALUE_THESIS": "If resellers adopt verified listings and landed-cost estimates prove accurate within ±10%, value is created via (1) higher transaction conversion from transparency and (2) reduced failed shipments — constrained by NCC compliance timelines and naira-CAD FX volatility.",
+
+  "SIDE_A_LABEL": "CANADA — Supply Side",
+  "SIDE_A_NODE_1": "Refurbished Electronics\\nSuppliers",
+  "SIDE_A_NODE_2": "Device Inventory\\n(Phones, Tablets)",
+  "SIDE_A_NODE_3": "IMEI Records +\\nCondition Grading",
+
+  "PLATFORM_LABEL": "PIPE 17 — Orchestration Engine",
+  "PLATFORM_NODE_1": "Verified Listing\\nModule",
+  "PLATFORM_NODE_2": "Landed-Cost\\nCalculator",
+  "PLATFORM_NODE_3": "Transaction\\nOrchestration",
+  "PLATFORM_NODE_4": "Compliance +\\nNCC Pre-Check",
+
+  "SIDE_B_LABEL": "NIGERIA — Demand Side",
+  "SIDE_B_NODE_1": "Device Resellers\\n(SW Nigeria)",
+  "SIDE_B_NODE_2": "End Consumers",
+
+  "FLOW_1": "DATA: Listings, IMEI",
+  "FLOW_2": "GOODS: Phones",
+  "FLOW_3": "IP: Verification",
+  "FLOW_4": "Verified Catalog",
+  "FLOW_5": "Landed-Cost Quote",
+  "FLOW_6": "GOODS + SERVICE",
+  "FLOW_7": "MONEY: Payment",
+  "FLOW_8": "MONEY: Settlement",
+
+  "CROSS_BORDER_FLOWS_SUMMARY": "Five cross-border flows: <strong>DATA · MONEY · GOODS · SERVICE · IP</strong>",
+
+  "CURRENT_LABEL": "Manual",
+  "CURRENT_STEP_1": "Supplier posts\\non WhatsApp",
+  "CURRENT_STEP_2": "Reseller negotiates\\nprice",
+  "CURRENT_STEP_3": "Manual landed-cost\\nguess (15–30% error)",
+  "CURRENT_STEP_4": "Payment sent\\non trust",
+  "CURRENT_STEP_5": "Shipment —\\nno verification",
+  "CURRENT_STEP_6": "Frequent disputes\\n+ failed deliveries",
+
+  "FUTURE_LABEL": "PIPE 17",
+  "FUTURE_STEP_1": "1. Supplier lists\\ndevices (IMEI, grade)",
+  "FUTURE_STEP_2": "2. PIPE 17 verifies\\nlisting",
+  "FUTURE_STEP_3": "3. Reseller browses\\nverified catalog",
+  "FUTURE_STEP_4": "4. Landed-cost calc\\n(Unit+Ship+Duty+FX)",
+  "FUTURE_STEP_5": "5. Conditional\\npayment (escrow)",
+  "FUTURE_STEP_6": "6. Shipment +\\ncompliance clearance",
+  "FUTURE_STEP_7": "7. Settlement\\nto supplier (CAD)",
+
+  "CLAIM_1_TECH": "PIPE 17 automates device verification (IMEI, grading), landed-cost calculation (unit + shipping + duty + NCC fees + FX margin), and transaction orchestration across fragmented APIs.",
+  "CLAIM_2_WORKFLOW": "Manual WhatsApp sourcing → structured pre-shipment orchestration: verified listing → landed-cost quote → conditional payment → shipment. Compliance verification becomes the new bottleneck.",
+  "CLAIM_3_MECHANISM": "Automated landed-cost calculation removes information asymmetry between supplier pricing and buyer total cost. Pre-shipment verification reduces post-arrival dispute rates.",
+  "CLAIM_4_VALUE_CREATION": "Suppliers: 20–35% higher transaction conversion. Resellers: 10–20% working capital recovery (currently lost to pricing surprises, customs holds, unverified quality).",
+  "CLAIM_5_VALUE_CAPTURE": "Suppliers: margin stability via reliable demand. Resellers: sourcing reliability. Platform: 2–4% orchestration fee. Switching costs sustain capture.",
+  "CLAIM_6_CROSS_BORDER": "Duty unpredictability, FX volatility (5–15% monthly), NCC type-approval, payment friction → value shifts from transaction speed to <em>trust assurance and cost predictability</em>.",
+
+  "VALUE_DOMESTIC_EMOJI": "🇨🇦",
+  "VALUE_DOMESTIC_LABEL": "Canada (Domestic)",
+  "VALUE_DOMESTIC_1": "Stable pricing +\\nreliable data",
+  "VALUE_DOMESTIC_2": "Accurate cost\\nestimation",
+  "VALUE_DOMESTIC_3": "Fast transaction\\nclosure",
+  "VALUE_DOMESTIC_RESULT": "VALUE =\\nTransaction Efficiency\\n+ Speed",
+
+  "VALUE_CROSS_BORDER_EMOJI": "🇳🇬",
+  "VALUE_CROSS_BORDER_LABEL": "Nigeria (Cross-Border)",
+  "VALUE_CROSS_1": "Duty unpredictability\\n+ FX volatility",
+  "VALUE_CROSS_2": "Cost estimation\\nunreliable (15–30%)",
+  "VALUE_CROSS_3": "NCC type-approval\\n+ payment friction",
+  "VALUE_CROSS_4": "Trust deficit +\\nfailed transactions",
+  "VALUE_CROSS_RESULT": "VALUE =\\nTrust Assurance\\n+ Risk Reduction",
+
+  "VALUE_SHIFT_INSIGHT": "Same technology, different value mechanism — this is what makes it a cross-border application.",
+
+  "EVIDENCE_1_FALSIFY": "PIPE 17 can't integrate with Nigerian gateways; cost calc >15% error",
+  "EVIDENCE_1_REQUIRED": "PIPE 17 API docs; integration case studies; pilot accuracy data",
+  "EVIDENCE_2_FALSIFY": "Resellers prefer WhatsApp even with automated alternatives",
+  "EVIDENCE_2_REQUIRED": "Reseller behavior surveys; digital adoption rates (TradeDepot, Jumia B2B); GSMA reports",
+  "EVIDENCE_3_FALSIFY": "Info asymmetry isn't the friction — trust or credit access matters more",
+  "EVIDENCE_3_REQUIRED": "Academic literature on trust in African B2B trade; World Bank Enterprise Surveys",
+  "EVIDENCE_4_FALSIFY": "Conversion gain <5%; resellers lack volume to benefit",
+  "EVIDENCE_4_REQUIRED": "Cross-border e-commerce platform data; Nigeria imports (UN Comtrade HS 8517/8471)",
+  "EVIDENCE_5_FALSIFY": "Resellers replicate easily; fee tolerance <2%",
+  "EVIDENCE_5_REQUIRED": "Competitor analysis; willingness-to-pay data; switching cost analysis",
+  "EVIDENCE_6_FALSIFY": "Duties predictable; FX stable; NCC trivial; payments smooth",
+  "EVIDENCE_6_REQUIRED": "Customs tariff variance; CBN FX rates; NCC processing times; Flutterwave/Paystack benchmarks",
+
+  "PLAN_TITLE": "Evidence Collection Timeline (Weeks 7–9)",
+  "PLAN_START": "2026-02-17",
+  "PLAN_MID": "2026-02-27",
+  "PLAN_END": "2026-03-09",
+
+  "PLAN_PERSON_1": "Abdullahi",
+  "PLAN_TASK_1A": "PIPE 17 API docs + integration specs",
+  "PLAN_TASK_1B": "Nigeria Customs tariff data",
+
+  "PLAN_PERSON_2": "Rauf",
+  "PLAN_TASK_2A": "Reseller sourcing behavior research",
+  "PLAN_TASK_2B": "CBN FX data (official vs parallel)",
+
+  "PLAN_PERSON_3": "Jayeola",
+  "PLAN_TASK_3A": "Trust vs info-asymmetry literature",
+  "PLAN_TASK_3B": "NCC type-approval process + costs",
+
+  "PLAN_PERSON_4": "Gideon",
+  "PLAN_TASK_4A": "UN Comtrade / NBS import data",
+  "PLAN_TASK_4B": "Payment settlement benchmarks",
+
+  "PLAN_SHARED_TASK": "Competitive landscape mapping",
+  "PLAN_FINAL_TASK": "Evidence synthesis + review",
+
+  "PLAN_MILESTONE": "All evidence compiled by Week 8 → synthesis by Mar 12 → Application Marker checkpoint Mar 13"
+}
